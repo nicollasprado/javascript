@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
-    <title>Compre</title>
+    <title>Calculadora</title>
 
     <style>
         body {
@@ -21,6 +21,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 1em;
             padding: 10px;
             border-radius: 2em;
             position: relative;
@@ -33,9 +34,21 @@
 </head>
 <body>
     <main>
-        <h1>Custo: 1 moeda</h1>
-        <button id="botao" onclick="comprar()">Comprar</button>
-        <h2 id="carteira">Carteira: 30</h2>
+        <h1>Calculadora Por 
+            <a href="https://github.com/NicollasMPP" target="_blank" rel="external">NicollasMPP</a>
+        </h1>
+        <label for="in1">Número 1:</label>
+        <input type="number" name="n1" id="in1" placeholder="numero 1" required>
+        <label for="in2">Número 2</label>
+        <input type="number" name="n2" id="in2" placeholder="numero 2" required>
+        <div class="botoes">
+            <button onclick="somar()">Somar</button>
+            <button onclick="subtrair()">Subtrair</button>
+            <button onclick="multiplicar()">Multiplicar</button>
+            <button onclick="dividir()">Dividir</button>
+            <button onclick="potencia()">Potência</button>
+        </div>
+        <h1 id="res"></h1>
     </main>
 </body>
 </html>
