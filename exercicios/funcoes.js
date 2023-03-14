@@ -20,3 +20,18 @@ var teste = function(x) {
     return x*2
 }
 console.log(teste(5))
+
+
+
+let amigo = {
+    nome: 'Adriano',
+    sexo: 'M',
+    peso: 70.6,
+    engordar(kg=0){
+        console.log('engordou!')
+        this.peso += kg
+    }
+}
+
+amigo.engordar(5)
+console.log(`Meu amigo ${amigo.nome} pesa ${amigo.peso}kg`)
