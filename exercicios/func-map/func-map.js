@@ -13,7 +13,7 @@ console.log(x)
 
 
 // por algum motivo nao funcionou
-const frutashtml = [document.getElementsByClassName("d")]
+const frutashtml = document.getElementsByClassName("d")
 frutashtml.map((obj) => {
     console.log(obj)
 })

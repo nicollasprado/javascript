@@ -9,7 +9,7 @@ function aluno(nome, nota) {
         }, 2000)
     }
 
-    this.dados=valores => {
+    this.dados=() => {
         console.log(this.nome)
         console.log(this.nota)
     }
