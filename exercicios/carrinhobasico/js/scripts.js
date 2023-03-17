@@ -21,12 +21,8 @@ btnnovo.addEventListener('click', () => {
     novoelemento.setAttribute('class','produto')
     alert(`O Produto ${nomefinal} Foi Adicionado Com Sucesso!`)
     let novosprodutos = [...document.querySelectorAll('.produto')];
-
-    novosprodutos.map((elemento) => {
-        elemento.addEventListener('click', (evento) => {
-            const selecionado = evento.target;
-            selecionado.classList.toggle('destaque');
-        })
+    novoelemento.addEventListener('click', (x) => {
+            novoelemento.classList.toggle('destaque')
     })
 }
 })
@@ -90,6 +86,7 @@ btnexcluir.addEventListener('click', (evento) => {
         confbtn.addEventListener('click', ()=> {
             let input = document.getElementById('confirmacaoexcl')
             let btnreverter = document.createElement('button')
+            const prodselecionado = document.querySelector('.destaque')
             if  (input.value === prodselecionado.innerText) {
                 prodselecionado.remove()
                 divisao.removeChild(input)
