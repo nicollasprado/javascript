@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: cornflowerblue;
+    border-radius: .5em;
+    width: 50%;
+    padding: 30px;
+}
+
+main h1 {
+    color: darkblue;
+    margin: auto;
+}
+
+/* Inputs */
+
+main > div {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+main label {
+    font-size: 18px;
+    padding: 5px;
+}
+
+main input {
+    padding: 5px;
+    border-radius: .5em;
+    border: solid 1px transparent;
+    outline-style: none;
+    transition: 600ms;
+}
+
+#inputBlindagem:hover {
+    cursor: not-allowed;
+}
+
+#inputMunicao:hover {
+    cursor: not-allowed;
+}
+
+main input:focus {
+    padding: 7px;
+    border: solid 1px black;
+}
+
+/* Botão */
+
+#btnAdd {
+    background-color: lightskyblue;
+    border: solid 1px transparent;
+    border-radius: .5em;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 600ms;
+}
+
+#btnAdd:hover {
+    letter-spacing: 1px;
+    color: white;
+    border: solid 1px darkcyan;
+    border-radius: .8em;
+    cursor: pointer;
+}
+
+/* Resultado */
+#resultado h1 {
+    font-size: 25px;
+}
+
+/* Especiais */
+
+.militarMarcado:hover {
+    cursor: text !important;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 768px) {
+    main h1 {
+        font-size: 20px;
+    }
+    #resultado h1 {
+        font-size: 18px;
+    }
+    #btnAdd {
+        font-size: 12px;
+    }
+}
