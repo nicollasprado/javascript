@@ -1,4 +1,3 @@
-// Armazenar os dados dos inputs ao clicar no botao
 const inputNome = document.getElementById('inputNome');
 const inputPortas = document.getElementById('inputPortas');
 const inputBlindagem = document.getElementById('inputBlindagem');
@@ -43,32 +42,6 @@ const criarItem = (par_tipo, par_nome, par_portas, par_blindagem, par_municao)=>
 })
 }
 
-// Botao remover funcionalidades
-
-btnRemover.addEventListener('click', ()=>{
-    let clicado = [...document.querySelectorAll('.clicado')];
-    if(clicado.length > 1) {
-        alert('Só é possível remover um item por vez');
-        clicado.map((elemento_clicado)=>{
-            elemento_clicado.classList.toggle('clicado');
-        })
-    }else {
-        if(confirm('Tem certeza?') == true){
-            clicado.map((elemento_clicado)=>{
-                divRes.removeChild(elemento_clicado);
-                let carrosCriados = [...document.querySelectorAll('.novoResultado')]
-                if(carrosCriados.length <= 0) {
-                    resBtns.classList.remove('aparecer');
-                }
-            })
-        }else{
-            clicado.map((elemento_clicado)=>{
-                elemento_clicado.classList.toggle('clicado');
-            })
-        }
-    }
-})
-
 // Evento de click no botão adicionar
 const carros = []
 const carMilitares = []
@@ -109,9 +82,39 @@ btnAdd.addEventListener('click', ()=>{
             criarItem('Civil', nome, portas);
         }
     }
-    // Aparição dos botões de remover e modificar
+})
+
+// Aparição dos botões de remover e modificar
+btnAdd.addEventListener('click', ()=>{
     if(carros.length != 0) {
         resBtns.classList.add('aparecer');
+    }
+})
+
+// Botao remover, funcionalidades
+btnRemover.addEventListener('click', ()=>{
+    let clicado = [...document.querySelectorAll('.clicado')];
+    if(clicado.length > 1) {
+        alert('Só é possível remover um item por vez');
+        clicado.map((elemento_clicado)=>{
+            elemento_clicado.classList.toggle('clicado');
+        })
+    }else if(clicado.length == 0){
+        alert('Nenhum Item Selecionado!')
+    }else {
+        if(confirm('Tem certeza?') == true){
+            clicado.map((elemento_clicado)=>{
+                divRes.removeChild(elemento_clicado);
+                let carrosCriados = [...document.querySelectorAll('.novoResultado')]
+                if(carrosCriados.length <= 0) {
+                    resBtns.classList.remove('aparecer');
+                }
+            })
+        }else{
+            clicado.map((elemento_clicado)=>{
+                elemento_clicado.classList.toggle('clicado');
+            })
+        }
     }
 })
 
