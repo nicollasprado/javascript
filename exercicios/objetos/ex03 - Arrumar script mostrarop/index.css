@@ -3,6 +3,7 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -11,7 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 100vh;
+    width: 100vw;
 }
 
 main {
@@ -25,7 +27,7 @@ main {
 
 main h1 {
     color: darkblue;
-    margin: auto;
+    margin: 0 auto;
 }
 
 /* Inputs */
@@ -84,8 +86,62 @@ main input:focus {
 }
 
 /* Resultado */
+
+#resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 #resultado h1 {
     font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.novoResultado {
+    display: flex;
+    flex-direction: column;
+    background-color: dodgerblue;
+    border: solid 1px transparent;
+    border-radius: 1em;
+    padding: 15px;
+    transition: 600ms;
+}
+
+.divOpcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.divOpcoes p {
+    padding: 20px;
+}
+
+.btnRemover {
+    background-color: red;
+    border: solid 1px transparent;
+    border-radius: 1em;
+    transition: 600ms;
+}
+
+.btnRemover:hover {
+    letter-spacing: 1px;
+    color: white;
+    border: solid 1px black;
+}
+
+.btnModificar {
+    background-color: grey;
+    border: solid 1px transparent;
+    border-radius: 1em;
+    transition: 600ms;
+}
+
+.btnModificar:hover {
+    letter-spacing: 1px;
+    color: white;
+    border: solid 1px black;
 }
 
 /* Especiais */
@@ -94,9 +150,20 @@ main input:focus {
     cursor: text !important;
 }
 
+.novoResultado:hover {
+    background-color: rgb(33, 130, 226);
+    border: solid 1px black;
+    cursor: pointer;
+}
+
 /* Media Query */
 
 @media only screen and (max-width: 768px) {
+    main {
+        width: 100%;
+        height: 100%;
+        border-radius: 0em;
+    }
     main h1 {
         font-size: 20px;
     }
