@@ -70,6 +70,7 @@ teclaIgual.addEventListener('click', ()=>{
     filhos.forEach((filho)=>{
         restxt+=filho.innerText;
     })
-    let res = eval(restxt)
+    let novotxt = restxt.replace("undefinedundefined", "")
+    let res = eval(novotxt)
     displayTxt.innerHTML = `<p>${res}</p>`
 })
