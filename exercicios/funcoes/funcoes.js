@@ -46,12 +46,13 @@ const t = function(v1=0, v2=0) {
 console.log(t(5,10))
 
 // Função Anônima Construtor
+// Utiliza o new
 
 const f = new Function("v1=0","v2=0","return v1+v2")
 
 console.log(f(35,25))
 
-// Arrow Function (funções lambidas -> funções anonimas)
+// Arrow Function (funções lambdas -> funções anonimas)
 
 const arrow=(v1,v2) => {return v1+v2}
 
