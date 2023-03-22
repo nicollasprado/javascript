@@ -24,6 +24,6 @@ console.log(soma(...valores)) //o spread espalha os valores nas posições do pa
 
 // Utilização no HTML   IMPORTANTE
 
-const objs1 = document.getElementsByClassName('div') // Mostra os elementos como HTMLCollection
-const objs2 = [...document.getElementsByClassName('div')] // Dá para utilizar mais funções de Array
+// const objs1 = document.getElementsByClassName('div') = Mostra os elementos como HTMLCollection
+// const objs2 = [...document.getElementsByClassName('div')] = Dá para utilizar mais funções de Array
 

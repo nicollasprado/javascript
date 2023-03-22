@@ -28,7 +28,7 @@ class Carro { // Classe PAI / BASE
 
 class SUV extends Carro{ // Classe FILHO
     constructor(par_nome, par_portas, par_assentos, par_capacidade){
-        // Super = invoca algo da classe PAI / BASE
+        // Super = invoca o construtor da classe PAI / BASE
         super(par_nome, par_portas);
         this.capacidade=par_capacidade+'kg';
         this.assentos=par_assentos;
